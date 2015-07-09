@@ -11,5 +11,12 @@ public interface MemberService extends BaseService<Member>{
 	List<Member> listMembers(String groupName);
 	
 	List<Member> findByType(String type);
+
+	Member getMemberByName(String memberName);
+
+	void loginSuccess(Member dbMember);
+
+	Member getMemberByLoadName(String loadname);
 	
+
 }
