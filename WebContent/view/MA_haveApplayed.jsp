@@ -41,7 +41,7 @@
   <!-- </div>闭合buttonBlock -->
   <table class="tableA" border="1" >
    <tr>
-    <th width="10%">选择</td>
+ 
     <th width="8%">年级</td>
     <th width="8%">姓名</td>
     <th width="10%">专业</td>
@@ -62,7 +62,7 @@
  	for(int i=0;i<users.size();i++){
  		%>
    <tr class="tr">
-    <td width="10%"><input type="checkbox" name="bike" /></td>
+
     
     <td width="8%"><%=users.get(i).getGrade() %></td>
     <td width="8%"><%=users.get(i).getUserName() %></td>

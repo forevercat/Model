@@ -10,13 +10,14 @@ import org.springframework.stereotype.Service;
 import net.gslab.dao.BaseDao;
 import net.gslab.dao.MemberDao;
 import net.gslab.entity.Member;
+import net.gslab.entity.User;
 import net.gslab.service.MemberService;
 
 @Service("memberServiceImpl")
 public class MemberServiceImpl extends BaseServiceImpl<Member> implements MemberService{
 
-	
-	MemberDao memberDao;
+	@Resource(name="memberDaoImpl")
+	private MemberDao memberDao;
 	
 /*	@Override
 	public void setBaseDao(BaseDao<Member> memberDao) {
@@ -62,4 +63,20 @@ public class MemberServiceImpl extends BaseServiceImpl<Member> implements Member
 	public void save(Member member){
 		memberDao.save(member);
 	}
+	
+	public Member getMemberByName(String username){
+		return memberDao.getUserByName(username);
+	}
+	@Override
+	public void loginSuccess(Member dbMember) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public Member getMemberByLoadName(String loadname) {
+		// TODO Auto-generated method stub
+		System.out.println("in the getMemberByLoadName");
+		return memberDao.getUserByLoadName(loadname);
+	}
+	
 }

@@ -5,8 +5,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>高思实验室2015春季招新</title>
-<script language="javascript" type="text/javascript"src="js/jquery-2.1.4.min.js"></script>
-<!-- <script language="javascript" type="text/javascript" src="My97DatePicker/WdatePicker.js"></script> -->
+<script language="javascript" type="text/javascript"src="../js/jquery-2.1.4.min.js"></script>
+ <script language="javascript" type="text/javascript" src="../js/WdatePicker.js"></script>
 <style type="text/css">
 * {
 	padding: 0;
@@ -153,7 +153,7 @@ h2 {
 						<option value="12">12级</option>
 						<option value="13">13级</option>
 						<option value="14">14级</option>
-					</select> &nbsp班号 <input name="classNo" width="50px" type="text" size="4" /> &nbsp学号 <input
+					</select> &nbsp班号 <input name="classNo" width="50px" type="text" size="4" value="0"/> &nbsp学号 <input
 						name="studentId" width="50px" type="text" size="9" />
 				</p>
 				<p id="major">
