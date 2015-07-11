@@ -55,13 +55,7 @@ function hideSignUp() {
     <div class="nav" >
         <img class="logo" src="../images/logo.png">
         <div class="login">
-            <a href="#first" id="loginA" class="loginA" onclick="show('loginDiv')">登录</a>
-			<% if(request.getAttribute("errorMsg")!=null){
-				out.println(request.getAttribute("errorMsg"));
-				
-			} else{
-				out.println("null");
-			}%>
+            <a href="mHome.jsp" id="loginA" class="loginA" onclick="show('loginDiv')">后台入口</a>
         </div>
         
         <ul>
@@ -79,7 +73,7 @@ function hideSignUp() {
                 
             <div class="loginButton">
                 <input type="submit" name="login" value="登录" onclick="hideLogin()">
-                <input type="submit" name="signUp" value="注册" onclick="show('signUpDiv');hideLogin()">
+              <!--    <input type="submit" name="signUp" value="注册" onclick="show('signUpDiv');hideLogin()">-->
             </div>
             </form>
 

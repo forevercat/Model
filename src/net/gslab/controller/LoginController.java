@@ -31,7 +31,7 @@ public class LoginController extends BaseController{
 
 	@RequestMapping(value="/doLogin",method=RequestMethod.GET)
 	public ModelAndView login(HttpServletRequest request,Member member){
-		System.out.println("in the login");
+		//System.out.println("in the login");
 		
 		Member dbMember = memberService.getMemberByLoadName(member.getLoadname());
 		ModelAndView mav = new ModelAndView();
@@ -50,7 +50,7 @@ public class LoginController extends BaseController{
 			//toUrl要访问的页面，由于拦截器，如果不能通过拦截器不能访问到正确的页面
 			request.getSession().removeAttribute(CommonConstant.LOGIN_TO_URL);
 			mav.setViewName("home");//逻辑视图，与applicationContext-mvc下定义的viewResolver对应，不光前面，还有后面的Jsp也不能加
-			System.out.println("用户申请跳转到页面："+toUrl);
+			//System.out.println("用户申请跳转到页面："+toUrl);
 			if(StringUtils.isEmpty(toUrl)){
 				toUrl="/view/home.jsp";
 			}
