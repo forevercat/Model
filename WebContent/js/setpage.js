@@ -85,7 +85,7 @@ function loadXMLDoc(url,cfunc)
 }
 function loadNewsContent(newsId) //请求新闻内容
 {
-  loadXMLDoc("getByID?"+"id="+newsId,function()
+  loadXMLDoc("/view/getByID?"+"id="+newsId,function()
      {
        if (xmlhttp.readyState==4 && xmlhttp.status==200)
           {  
@@ -106,7 +106,7 @@ function reloadpage(target)
    {
 	 var newsArray;
 	 var newsList="";
-     loadXMLDoc("getPage?"+"pageIndex="+target,function()
+     loadXMLDoc("/view/getPage?"+"pageIndex="+target,function()
         {
           if (xmlhttp.readyState==4 && xmlhttp.status==200)
              {

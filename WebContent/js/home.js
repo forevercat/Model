@@ -107,7 +107,7 @@ function loadImage (urlArray) {   //异步加载图片
 }
 function loadImgList(groupName) //发送请求  动态加载组员图片列表  分页
    {
-     loadXMLDoc("about?groupName="+groupName,function()
+     loadXMLDoc("/view/about?groupName="+groupName,function()
         {
           if (xmlhttp.readyState==4 && xmlhttp.status==200)
              {
@@ -119,7 +119,7 @@ function loadImgList(groupName) //发送请求  动态加载组员图片列表  
  } 
  function loadNewsList(num) //请求初始部分新闻列表
    {
-     loadXMLDoc("get9Page",function()
+     loadXMLDoc("/view/get9Page",function()
         {
           if (xmlhttp.readyState==4 && xmlhttp.status==200)
              {
@@ -158,7 +158,7 @@ function loadImgList(groupName) //发送请求  动态加载组员图片列表  
 
 function loadNewsContent(newsId) //请求新闻内容
    {
-     loadXMLDoc("getByID?"+"id="+newsId,function()
+     loadXMLDoc("/view/getByID?"+"id="+newsId,function()
         {
           if (xmlhttp.readyState==4 && xmlhttp.status==200)
              {  
