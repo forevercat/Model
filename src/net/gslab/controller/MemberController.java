@@ -9,6 +9,7 @@ import javax.annotation.Resource;
 import net.gslab.entity.Member;
 import net.gslab.entity.Member.Category;
 import net.gslab.service.MemberService;
+import net.gslab.setting.Page;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -46,9 +47,11 @@ public class MemberController extends BaseController{
 		return false;
 	}
 	
-	@RequestMapping(value="/findAllmember",method=RequestMethod.GET)
-	public @ResponseBody List<Member> findAllmember(){
-		List<Member> members= memberService.findByType("member");
+	@RequestMapping(value="/findmember",method=RequestMethod.GET)
+	public @ResponseBody List<Member> findmember(int i){
+		Page page= memberService.getPage(i);
+		int max=page.getPageSize();
+		List<Member> members=page.getData();
 		return members;
 				
 	}
