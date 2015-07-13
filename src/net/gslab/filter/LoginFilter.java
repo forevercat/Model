@@ -19,7 +19,7 @@ import net.gslab.setting.CommonConstant;
 public class LoginFilter implements Filter {
 
 	private static final String FILTERED_REQUEST = "@@session_context_filtered_request";
-	private static final String[] INHERENT_ESCAPE_URIS = { "/view/home.jsp"};
+	private static final String[] INHERENT_ESCAPE_URIS = { "/view/home.jsp","/view/aplay.jsp"};
 
 	/**
 	 * Default constructor.

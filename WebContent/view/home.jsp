@@ -55,7 +55,7 @@ function hideSignUp() {
     <div class="nav" >
         <img class="logo" src="../images/logo.png">
         <div class="login">
-            <a href="mHome.jsp" id="loginA" class="loginA" onclick="show('loginDiv')">后台入口</a>
+            <a href="#first" id="loginA" class="loginA" onclick="show('loginDiv')">后台入口</a>
         </div>
         
         <ul>
@@ -65,14 +65,16 @@ function hideSignUp() {
             <li class="shadow"><a class="button" href="#employ" >实验室诚聘</a></li>
         </ul>
         <div class="loginDiv" id="loginDiv">
+        <form action="/view/doLogin">
             <div class="loginLogo"><img src="../images/logo.png"></div>
             <div class="userInput">
-            	<form action="doLogin">
+            	
                 <input type="text" placeholder="&nbsp用户名" name="loadname"/>
-                <input type="password" placeholder="&nbsp密码" id="password" name="password"/></div>
+                <input type="password" placeholder="&nbsp密码" id="password" name="password"/>
+              </div>
                 
             <div class="loginButton">
-                <input type="submit" name="login" value="登录" onclick="hideLogin()">
+                <input type="submit" name="login" value="登录" <!--  onclick="hideLogin()"-->>
               <!--    <input type="submit" name="signUp" value="注册" onclick="show('signUpDiv');hideLogin()">-->
             </div>
             </form>
@@ -285,7 +287,7 @@ function hideSignUp() {
     <h1>实验室诚聘</h1>
 
     <div class="whiteMan">
-        <a href="aplay.jsp" class="applay" target="_blank"><img src="../images/employ.jpg"></a>
+        <a href="/view/aplay.jsp" class="applay" target="_blank"><img src="../images/employ.jpg"></a>
     </div>
     <div class="words">
         <img src="../images/words.jpg">
